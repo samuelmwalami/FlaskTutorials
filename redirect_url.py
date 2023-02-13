@@ -6,10 +6,14 @@ app = Flask(__name__)
 def home():
     return "<h1>Welcome to the home page</h1>"
 
+@app.route('/greet/<person>')
+def greet(person):
+    return f"<h1>Hello {person}</h1>"
+
 @app.route('/back')
 def back():
-    return redirect(url_for("home"))
+    return redirect(url_for("greet", person="Sam"))
 
 
-if __name__ == "__mainn__":
+if __name__ == "__main__":
     app.run()
