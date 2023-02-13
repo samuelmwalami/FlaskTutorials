@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for loop</title>
+</head>
+    <body>
+    <p>Hello <span>{{content}}</span></p>
+
+    <div>
+        <h1>Printing 0 to 9 Using for loop</h1>
+    
+        {%for _ in range(10)%}
+        <p>{{_}}</p>
+        {%endfor%}  
+    </div>
+    
+    <div>
+        <h1>Printing even numbers between 0 and 100</h1>
+        {%for _ in range(21)%}
+        {%if _%2==0%}
+        <p>{{_}}</p>
+        {%endif%}
+        {%endfor%}
+    </div>
+    
+
+    </body>
+
+</html>
