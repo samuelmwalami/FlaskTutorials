@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
-app = Flask(__name__)
+app = Flask(__name__ ,template_folder='template')
 
 @app.route('/')
 def home():
@@ -8,4 +8,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
