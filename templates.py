@@ -10,5 +10,10 @@ def home():
 def decisions():
     return render_template("decision.html",content="John")
 
+@app.route('/lists')
+def lists():
+    mylist = ['john','felix','peter','andrew']
+    return render_template('decision.html', listcontent=mylist)
+
 if __name__ == "__main__":
     app.run(debug = True)

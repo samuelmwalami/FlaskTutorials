@@ -22,6 +22,20 @@
         {%endif%}
         {%endfor%}
     </div>
+
+    <div>
+        <h1>Looping through a list</h1>
+        {%for _ in listcontent%}
+        <p>Hello {{_}}</p>
+        {%endfor%}
+    </div>
+
+    <div>
+        <h1>While loop</h1>
+        {%for _ in range(1000000):%}
+        <p>{{_}}</p>
+        {%endfor%}
+    </div>
     
 
     </body>
